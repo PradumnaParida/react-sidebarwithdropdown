@@ -1,0 +1,24 @@
+import "./App.css";
+import Sidebar from "./components/Sidebar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import { Reports, ReportsOne, ReportsTwo, ReportsThree } from "./pages/Reports";
+import Team from "./pages/Team";
+
+function App() {
+  return (
+    <Router>
+      <Sidebar />
+      <Routes>
+        <Route path="/home" exact component={Home} />
+        <Route path="/reports" exact component={Reports} />
+        <Route path="/reports/reports1" exact component={ReportsOne} />
+        <Route path="/reports/reports2" exact component={ReportsTwo} />
+        <Route path="/reports/reports3" exact component={ReportsThree} />
+        <Route path="/team" exact component={Team} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
